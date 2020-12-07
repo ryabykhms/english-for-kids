@@ -1,0 +1,16 @@
+.cards__wrapper {
+  padding: 100px 20px;
+  flex-direction: column;
+
+  @include media-tablet {
+    padding: 20px 20px;
+  }
+}
+
+.card-list {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  column-gap: 10px;
+}

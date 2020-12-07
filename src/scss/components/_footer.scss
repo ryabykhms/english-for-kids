@@ -1,0 +1,44 @@
+.footer {
+  width: 100%;
+  min-height: 60px;
+  font-size: 2rem;
+}
+
+.footer__wrapper {
+  justify-content: center;
+  padding: 20px 0;
+
+  > * {
+    margin-right: 40px;
+  }
+
+  @media (max-width: 500px) {
+    flex-direction: column;
+
+    > * {
+      margin-right: 0;
+      margin-bottom: 10px;
+    }
+  }
+}
+
+.footer__year,
+.footer__copyright {
+  margin-right: 5px;
+}
+
+.footer__logo {
+  width: auto;
+  height: 30px;
+}
+
+.footer__link {
+  color: #000;
+  text-decoration: underline;
+}
+
+.footer__credentials {
+  @media (max-width: 500px) {
+    order: 1;
+  }
+}

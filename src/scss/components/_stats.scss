@@ -1,0 +1,29 @@
+.stats__wrapper {
+  position: relative;
+  overflow: auto;
+  flex-direction: column;
+}
+
+.stats {
+  width: 100%;
+  text-align: center;
+  background: #fff;
+  max-width: 100%;
+  border-collapse: collapse;
+
+  th {
+    color: #2b5876;
+    border-bottom: 2px solid #2b5876;
+    padding: 10px 8px;
+  }
+
+  td {
+    color: #2b5876;
+    padding: 9px 8px;
+    transition: 0.3s;
+  }
+
+  tr:hover td {
+    color: #c31432;
+  }
+}

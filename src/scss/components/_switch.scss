@@ -1,0 +1,88 @@
+.switch-box {
+  position: relative;
+  width: 120px;
+  height: 40px;
+
+  @media (max-width: 500px) {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.switch {
+  position: absolute;
+  right: 0;
+  display: block;
+  width: 120px;
+  height: 40px;
+  padding: 3px;
+  cursor: pointer;
+
+  @media (max-width: 500px) {
+    position: relative;
+  }
+}
+
+.switch__checkbox {
+  display: none;
+}
+
+.switch__label {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+  font-size: 18px;
+  line-height: 35px;
+  text-transform: uppercase;
+  background: $color-gradient-train;
+  border-radius: 5px;
+
+  &:before {
+    content: 'Play';
+    position: absolute;
+    color: $color-light;
+    top: 0;
+    right: 15px;
+    opacity: 0;
+  }
+
+  &:after {
+    content: 'Train';
+    position: absolute;
+    color: $color-light;
+    top: 0;
+    left: 15px;
+  }
+}
+
+.switch__switcher {
+  position: absolute;
+  top: 6px;
+  left: 85px;
+  width: 28px;
+  height: 28px;
+  background: #fff;
+  background-image: none;
+  border-radius: 5px;
+  background-image: linear-gradient(180deg, #fff 40%, #f0f0f0);
+  transition: left 0.15s ease-out;
+}
+
+.switch__checkbox:checked ~ .switch__switcher {
+  left: 6px;
+}
+
+.switch__checkbox:checked ~ .switch__label {
+  background: $color-gradient-play;
+
+  &:after {
+    opacity: 0;
+  }
+
+  &:before {
+    opacity: 1;
+  }
+}

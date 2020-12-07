@@ -1,0 +1,107 @@
+$color-accent: #cdcdcd;
+$color-dark: #c5c5c5;
+$color-light: #fff;
+$color-gradient-train: linear-gradient(to right, #c3284d, #f76463);
+$color-gradient-play: linear-gradient(to right, #f5da8b, #e9a263, #e47449);
+$color-gradient-english-flag: linear-gradient(
+    180deg,
+    transparent,
+    transparent 44px,
+    #c8102e 44px,
+    #c8102e 66px,
+    transparent 66px,
+    transparent 100%
+  ),
+  linear-gradient(
+    90deg,
+    transparent,
+    transparent 99px,
+    #c8102e 99px,
+    #c8102e 121px,
+    transparent 121px,
+    transparent 100%
+  ),
+  linear-gradient(
+    180deg,
+    transparent,
+    transparent 37px,
+    #aaa 37px,
+    #aaa 73px,
+    transparent 73px,
+    transparent 100%
+  ),
+  linear-gradient(
+    90deg,
+    transparent,
+    transparent 92px,
+    #aaa 92px,
+    #aaa 128px,
+    transparent 128px,
+    transparent 100%
+  ),
+  linear-gradient(
+      26.56505deg,
+      transparent,
+      transparent 91px,
+      #c8102e 91px,
+      #c8102e 98px,
+      transparent 98px,
+      transparent 100%
+    )
+    0 0/110px 100% no-repeat,
+  linear-gradient(
+      -26.56505deg,
+      transparent,
+      transparent 98px,
+      #c8102e 98px,
+      #c8102e 106px,
+      transparent 106px,
+      transparent 100%
+    )
+    110px 0/110px 100% no-repeat,
+  linear-gradient(
+      26.56505deg,
+      transparent,
+      transparent 98px,
+      #c8102e 98px,
+      #c8102e 106px,
+      transparent 106px,
+      transparent 100%
+    )
+    110px 55px/110px 100% no-repeat,
+  linear-gradient(
+      -26.56505deg,
+      transparent,
+      transparent 91px,
+      #c8102e 91px,
+      #c8102e 98px,
+      transparent 98px,
+      transparent 100%
+    )
+    0 55px/110px 100% no-repeat,
+  linear-gradient(
+    27deg,
+    transparent,
+    transparent 87px,
+    #aaa 87px,
+    #aaa 109px,
+    transparent 109px,
+    transparent 100%
+  ),
+  linear-gradient(
+    153deg,
+    transparent,
+    transparent 87px,
+    #aaa 87px,
+    #aaa 109px,
+    transparent 109px,
+    transparent 100%
+  ),
+  #012169;
+
+$content-width: 1200px;
+$laptop-small-width: 1024px;
+$tablet-width: 767px;
+$tablet-small-width: 700px;
+$mobile-big-width: 414px;
+$mobile-small-width: 320px;

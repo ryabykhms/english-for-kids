@@ -1,0 +1,32 @@
+.header {
+  width: 100%;
+  min-height: 60px;
+}
+
+.header__wrapper {
+  padding: 20px 0;
+  flex-wrap: wrap;
+
+  @media (max-width: 500px) {
+    justify-content: flex-start;
+  }
+}
+
+.header__title {
+  font-weight: bold;
+  font-size: 4rem;
+  color: transparent;
+  background: $color-gradient-english-flag;
+  background-clip: text;
+
+  @media (max-width: 500px) {
+    margin-left: 20px;
+    font-size: 3rem;
+  }
+}
+
+.header__switch {
+  @media (max-width: 500px) {
+    margin: 20px auto;
+  }
+}
