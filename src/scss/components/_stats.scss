@@ -16,6 +16,17 @@
     border-bottom: 2px solid #2b5876;
     padding: 10px 8px;
     cursor: pointer;
+
+    &:after {
+      content: '\2191';
+      margin-left: 10px;
+    }
+  }
+
+  .th--desc {
+    &:after {
+      content: '\2193';
+    }
   }
 
   td {

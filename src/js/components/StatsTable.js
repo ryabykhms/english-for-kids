@@ -25,6 +25,7 @@ export default class StatsTable extends Component {
       const boolAsc = data.asc === 'true';
       this.sortWords(data.orderBy, boolAsc, data.type);
       this.thList[data.index].dataset.asc = newAsc;
+      this.thList[data.index].classList.toggle('th--desc', !boolAsc);
       this.tbody.innerHTML = '';
       this.tbody.append(...this.createTrList());
     }
