@@ -18,6 +18,7 @@
   color: transparent;
   background: $color-gradient-english-flag;
   background-clip: text;
+  -webkit-background-clip: text;
 
   @media (max-width: 500px) {
     margin-left: 20px;
