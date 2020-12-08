@@ -79,6 +79,7 @@
   background: none;
   border-radius: 5px;
   overflow: hidden;
+  position: relative;
 
   &--flipped {
     transform: rotateY(180deg);
