@@ -26,8 +26,15 @@ export default class Component extends EventEmitter {
   }
 
   createComponentWithAppend(tag, children, ...classes) {
-    const component = this.createComponent(tag, ...classes);
-    component.append(...children);
+    let component = {};
+
+    if (children.length === 1 && typeof children[0] === 'string') {
+      component = this.createComponentWithText(tag, children[0], ...classes);
+    } else {
+      component = this.createComponent(tag, ...classes);
+      component.append(...children);
+    }
+
     return component;
   }
 
