@@ -98,6 +98,7 @@
     width: 100%;
     opacity: 0.5;
     box-shadow: none;
+    position: relative;
   }
 
   @include media-laptop-small {
