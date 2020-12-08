@@ -17,6 +17,7 @@ export default class CategoryController extends Controller {
 
   index(args) {
     this.model.setCurrentCategory(args);
+    this.model.endPlayGame();
     const { state } = this.model;
 
     const rating = new Rating(null, state);
@@ -103,14 +104,18 @@ export default class CategoryController extends Controller {
     this.gameOver.setResult(isSuccess, result);
     this.view.rootElement.innerHTML = '';
     this.view.rootElement.append(this.gameOver.rootElement);
+
     if (isSuccess) {
       this.constAudios.success.play();
     } else {
       this.constAudios.failure.play();
     }
+
+    this.model.endPlayGame();
+
     setTimeout(() => {
       window.location = '/';
-    }, 5000);
+    }, 3000);
   }
 
   setCurrentAudioAndWord() {
