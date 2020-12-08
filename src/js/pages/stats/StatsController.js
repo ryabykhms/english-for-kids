@@ -4,6 +4,7 @@ import StatsModel from './StatsModel';
 import Main from '../../components/Main';
 import StatsTable from '../../components/StatsTable';
 import StatsContainer from '../../components/StatsContainer';
+import StatsButtonsContainer from '../../components/StatsButtonsContainer';
 import ResetStatsButton from '../../components/ResetStatsButton';
 import RepeatButton from '../../components/RepeatButton';
 
@@ -20,7 +21,8 @@ export default class StatsController extends Controller {
     const statsTable = new StatsTable(null, state);
     const resetButton = new ResetStatsButton(null, state);
     const repeatButton = new RepeatButton(null, state);
-    const statsContainer = new StatsContainer([resetButton, repeatButton, statsTable], state);
+    const statsButtonsContainer = new StatsButtonsContainer([repeatButton, resetButton], state);
+    const statsContainer = new StatsContainer([statsButtonsContainer, statsTable], state);
     const main = new Main([statsContainer], state);
 
     resetButton.on('resetStats', () => this.resetStats());

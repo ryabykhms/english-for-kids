@@ -1,4 +1,4 @@
-.play-button {
+.button {
   width: 100%;
   padding: 20px 30px;
   font-size: 2rem;
@@ -9,6 +9,12 @@
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
   transition: all 0.5s ease;
 
+  &--train {
+    background: $color-gradient-train;
+  }
+}
+
+.play-button {
   &:hover {
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
   }
@@ -26,6 +32,24 @@
     padding: 20px;
     background-size: 80%, 100%;
   }
+}
+
+.stats__buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.stats__button {
+  max-width: 200px;
+  font-size: 1.4rem;
+  padding: 10px 15px;
+}
+
+.stats__reset {
+  max-width: 100px;
+  margin-left: 10px;
 }
 
 .rating {

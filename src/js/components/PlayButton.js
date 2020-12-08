@@ -4,7 +4,12 @@ export default class PlayButton extends Component {
   constructor(elements, props) {
     super(elements, props);
 
-    this.rootElement = this.createComponentWithText('button', 'Start Game', 'play-button');
+    this.rootElement = this.createComponentWithText(
+      'button',
+      'Start Game',
+      'button',
+      'play-button'
+    );
     this.rootElement.addEventListener('click', (e) => this.emit('play', e.target));
 
     this.update(props);
