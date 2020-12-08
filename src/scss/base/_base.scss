@@ -12,4 +12,16 @@ body {
   align-items: center;
   margin: 0 auto;
   max-width: 1200px;
+
+  @include media-laptop {
+    max-width: $laptop-small-width;
+  }
+
+  @include media-laptop-small {
+    max-width: $tablet-width;
+  }
+
+  @include media-tablet {
+    max-width: 95%;
+  }
 }
