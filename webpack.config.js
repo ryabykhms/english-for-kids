@@ -6,6 +6,7 @@ const CopyWebpackPlugin = require('copy-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const OptimizeCssAssetsWebpackPlugin = require('optimize-css-assets-webpack-plugin');
 const TerserWebpackPlugin = require('terser-webpack-plugin');
+const { NetlifyPlugin } = require('netlify-wepback-plugin');
 
 const isDev = process.env.NODE_ENV === 'development';
 const isProd = !isDev;
@@ -77,6 +78,16 @@ const jsLoaders = () => {
 
 const plugins = () => {
   const base = [
+    new NetlifyPlugin({
+      redirects: [
+        {
+          from: '/*',
+          to: '/index.html',
+          status: 200,
+          force: true,
+        },
+      ],
+    }),
     new HTMLWebpackPlugin({
       template: './src/index.html',
       minify: {
